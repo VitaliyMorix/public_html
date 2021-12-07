@@ -9,8 +9,8 @@
 
   <body>	
     <header> 
-      <nav id="fix_nav_bar">
-        <div class="header-setup-style">
+      <nav id="axis">
+        <div class="header-setup-style object move">
           <div class="setup-menu-header">
             <a href="../file_php/post.html">Примеры<br>на PHP</a>
             <a href="../html_file/js_test.html">Примеры<br>на JS</a>
@@ -21,25 +21,6 @@
         </div>
       </nav>
     </header>
-
-    <!--
-    <script>
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function() {myFunction()};
-        // Get the navbar
-        var fix_nav_bar = document.getElementById("fix_nav_bar");
-        // Get the offset position of the navbar
-        var addShow = fix_nav_bar.offsetTop;
-        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function myFunction() {
-          if (window.pageYOffset >= addShow) {
-            fix_nav_bar.classList.add("addShow")
-          } else {
-            fix_nav_bar.classList.remove("addShow");
-          }
-        }
-    </script>
-    -->
 
     <div class="box">
       <div class="h1-align"><h1>Красоты природы в играх.</h1></div>
@@ -85,6 +66,34 @@
             <p>Мир, окружающий главного героя, не просто похож на средневековую эпоху, а практически им является.
             Рассмотрим первое поселение, которое встречает главный герой - Ривервуд.</p>
           </div>
+        </div>
+      </div>
+
+      <!--
+      <script>
+        const navBar = document.querySelectorAll('.fix_nav_bar');
+
+        window.addEventListener('scroll', checkBoxes);
+        checkNavBar(); // shows initial box(es) 
+
+        function checkNavBar() {
+          const triggerBottom = (window.innerHeight / 5 * 40);
+          
+          navBar.forEach(fix_nav_bar => {
+            const boxTop = navBar.getBoundingClientRect().top;
+            
+            if(boxTop < triggerBottom) {
+              box.classList.add('addShow');
+            } else {
+              box.classList.remove('addShow');
+            }
+          })
+        }
+      </script>
+      -->
+      <div id="axis">
+        <div class="object van move">
+          тестовая надпись
         </div>
       </div>
 
