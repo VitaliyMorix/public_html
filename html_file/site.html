@@ -9,7 +9,7 @@
 
   <body>	
     <header> 
-      <nav id="axis">
+      <nav id="">
         <div class="header-setup-style object move">
           <div class="setup-menu-header">
             <a href="../file_php/post.html">Примеры<br>на PHP</a>
@@ -69,34 +69,14 @@
         </div>
       </div>
 
-      <!--
-      <script>
-        const navBar = document.querySelectorAll('.fix_nav_bar');
-
-        window.addEventListener('scroll', checkBoxes);
-        checkNavBar(); // shows initial box(es) 
-
-        function checkNavBar() {
-          const triggerBottom = (window.innerHeight / 5 * 40);
-          
-          navBar.forEach(fix_nav_bar => {
-            const boxTop = navBar.getBoundingClientRect().top;
-            
-            if(boxTop < triggerBottom) {
-              box.classList.add('addShow');
-            } else {
-              box.classList.remove('addShow');
-            }
-          })
-        }
-      </script>
-      -->
       <div id="axis">
-        <div class="object van move">
-          тестовая надпись
+        <div class="main-style active">
+          <div class="text-layer">
+            <a>тестовая надпись</a>
+          </div>
         </div>
       </div>
-
+      
       <div class="box">
         <div class="sim-slider">
           <ul class="sim-slider-list">
@@ -147,7 +127,7 @@
       </p>
     </footer>
  
-
+    <script src="../js_scripts/script_nav_bar.js"></script>
 <!-- подключение слайдера -->
 <script src="../js_scripts/sim-slider.js"></script>
 <!-- вызов слайдера -->

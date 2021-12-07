@@ -124,18 +124,16 @@ header{
 /*2 конец*/
 /*----------------------------------------*/
 
-.object{
-  position: absolute;
-  transition: all 2s ease-in-out;
+#axis {
+  transition: all .2s ease-in-out;
+  transform: translate(0, 0);
+  opacity: 0;
 }
 
-.van{
-  top:45%;
-  left: 44%;
-}
-
-#axis:hover .move{
-  transform: translate(0,-100px);
+#axis.active{
+  transform: translate(0, 100px);
+  opacity: 1;
+  z-index: 1;
 }
 h1{
   margin-left:auto;
