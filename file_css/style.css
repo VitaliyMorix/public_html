@@ -35,7 +35,7 @@ body{
 .sideBarAmin a{
   text-decoration: none;
 }
-.sideBarAmin.active{
+.active {
   background-color: aliceblue;
 }
 
