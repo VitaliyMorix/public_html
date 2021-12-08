@@ -14,10 +14,6 @@ body{
  overflow-x: hidden;
 }
 
-.sideBarAmin a{
-  text-decoration: none;
-}
-
 @keyframes move {
   from {top:-20%; left: 21%;}
   to {top:20%; left: 21%;}
@@ -29,12 +25,18 @@ body{
   z-index: 2000;
   top:20%;
   left: 21%;
-  background-color: #00eef7; 
+  /*background-color: #00eef7; */
   display: flex;
   flex-direction: column;
   padding: 10px;
   font-size: 20px;
-  animation: move 500ms ease;
+}
+
+.sideBarAmin a{
+  text-decoration: none;
+}
+.sideBarAmin.active{
+  background-color: aliceblue;
 }
 
 main{

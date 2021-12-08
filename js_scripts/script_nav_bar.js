@@ -1,16 +1,29 @@
-const boxes2 = document.querySelectorAll('.sideBarAmin');
-
-  window.addEventListener('scroll', checkAxis);
-  checkAxis(); // shows initial box(es) 
-
-  function checkAxis() {
-    const triggerBottom2 = (window.innerHeight/5*4);
-    
-    boxes2.forEach(axis => {
-      const boxTop2 = sideBarAmin.getBoundingClientRect().top;
+var block_show = null;
+ 
+function scrollTracking(){
+	var wt = $(window).scrollTop();
+	var wh = $(window).height();
+	var et = $('#headerID').offset().top;
+	var eh = $('#headerID').outerHeight();
+	
+	if (et >= wt && et + eh <= wh + wt){
+		if (block_show == null || block_show == false) {
+			console.log("Visible");
       
-      if(boxTop2 < triggerBottom2) {
-        sideBarAmin.classList.add('show');
-      }
-    })
-  }
+		}
+		block_show = true;
+	} else {
+		if (block_show == null || block_show == true) {
+			console.log("Hidden");
+		}
+		block_show = false;
+	}
+}
+ 
+$(window).scroll(function(){
+	scrollTracking();
+});
+	
+$(document).ready(function(){ 
+	scrollTracking();
+});
