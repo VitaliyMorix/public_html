@@ -3,6 +3,16 @@
  src:url(../font/Raleway-Regular.ttf);
 }
 
+@keyframes move {
+  0%{margin: 0;}
+  100%{margin: 10px;}
+}
+
+@keyframes move1 {
+  0%{margin: 10px;}
+  100%{margin: 0px;}
+}
+
 body{
  margin-left:auto;
  margin-right:auto;
@@ -112,7 +122,7 @@ main{
   max-width: 900px;
   min-width: inherit;
   text-align: center;
-  padding: 20px;
+  padding:10px;
   margin-left:auto;
   margin-right:auto;
 }
@@ -130,13 +140,26 @@ main{
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.267);
   color:black;
   text-decoration: none;
-  margin-inline: 20px;
+  margin-inline: 25px;
 }
-.setup-menu-header a:hover{
+.setup-menu-header p{
+  margin-inline: 25px;
+}
+
+.header-setup-style a{
+  /*margin-inline: 25px;*/
+  transform: scale(1);
+  transition: transform 500ms ease;
+}
+
+.header-setup-style a:hover{
   background-color: rgb(61, 232, 255);
   color: #002fff;
-  overflow: hidden
+  /*margin-inline: 30px;*/
+  transform: scale(1.2);
+  transition: transform 500ms ease;
 }
+
 /*2 конец*/
 /*----------------------------------------*/
 .objective{
@@ -238,6 +261,7 @@ footer{
   flex-direction: row;
   justify-content: space-around;
 }
+
 .flex-box0{
   display: flex;
   flex-direction: column;
@@ -246,28 +270,16 @@ footer{
   align-items: center;
 }
 
+
 .flex-box0 img:hover{
   background-color: rgb(238, 238, 238);
+  border-radius: 8px;
   transform: scale(2);
   transition: transform 500ms ease;
-  border-radius: 8px;
-}
-
-@keyframes move {
-  0%{margin: 0;}
-  /*50%{margin: 5px;}*/
-  100%{margin: 10px;}
-}
-
-@keyframes move1 {
-  0%{margin: 10px;}
-  /*50%{margin: 5px;}*/
-  100%{margin: 0px;}
 }
 
 .flex-box0 a:hover{
   margin: 10px;
-  /*transform:move;*/
   animation: move 500ms ease;
 }
 
@@ -279,11 +291,6 @@ footer{
 .flex-box0 img{
   transform: scale(1);
   transition: transform 500ms ease;
-}
-.flex-box1 a:hover{
-  background-color: rgb(238, 238, 238);
-  color: black;
-  border-radius: 5px;
 }
 
 .flex-box1{
@@ -314,6 +321,19 @@ footer{
 .logo-footer-style img{
   border-radius: 100px;
   width: 150px;
+}
+
+#buttomClick{
+  padding: 5px;
+  margin: 5px;
+  background-color: #5E91FF;
+  width: 30%px;
+  height: 50px;
+  border-radius: 7px;
+  font-family: Raleway;
+  font-size: 20px;
+  cursor: pointer;
+  border-color: black;
 }
 
 /*Смена картинок (начало)*/
