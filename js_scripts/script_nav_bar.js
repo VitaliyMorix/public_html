@@ -11,6 +11,7 @@ function scrollTracking(){
 			console.log("Visible");
       $(document).ready(function(){
         $(".sideBarAmin").removeClass("active");			
+		$(".sideBarAmin").addClass("active2");
       });
 		}
 		block_show = true;
@@ -18,6 +19,7 @@ function scrollTracking(){
 		if (block_show == null || block_show == true) {
 			console.log("Hidden");
       $(".sideBarAmin").addClass("active");
+	  $(".sideBarAmin").removeClass("active2");
 		}
 		block_show = false;
 	}

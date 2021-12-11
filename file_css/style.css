@@ -14,11 +14,6 @@ body{
  overflow-x: hidden;
 }
 
-@keyframes move {
-  from {top:-20%; left: 21%;}
-  to {top:20%; left: 21%;}
-}
-
 .sideBarAmin{
   position:fixed;
   display: block;
@@ -30,18 +25,19 @@ body{
   flex-direction: column;
   padding: 10px;
   font-size: 20px;
-  /*transform: translateY(-400%);*/
 }
 
 .sideBarAmin a{
   text-decoration: none;
 }
 .active {
-  /*background-color: aliceblue;
-  transition: move 0.4s ease;*/
-  transform: translateY(400%);
+  transform: translateY(200%);
   transition: transform 0.4s ease;
-  /*transition: move 0.4s ease;*/
+}
+
+.active2{
+  transform: translateY(-200%);
+  transition: transform 0.4s ease;
 }
 
 main{
