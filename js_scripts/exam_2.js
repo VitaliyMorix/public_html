@@ -1,4 +1,7 @@
 //проверка работы инкремента
-let x=2;
-const r1=++x + ++x;
-alert(r1);
+buttomClickINC.onclick=function ()
+{
+    let x=2;
+    const r1=++x + ++x;
+    alert(r1);
+}

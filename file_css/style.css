@@ -323,11 +323,13 @@ footer{
   width: 150px;
 }
 
-#buttomClick{
+.buttomStyle{
   padding: 5px;
-  margin: 5px;
+  margin-block: 5px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #5E91FF;
-  width: 30%px;
+  width: 220px;
   height: 50px;
   border-radius: 7px;
   font-family: Raleway;
