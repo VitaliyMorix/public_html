@@ -1,18 +1,34 @@
-const navBar = document.querySelectorAll('.fix_nav_bar');
-
-window.addEventListener('scroll', checkBoxes);
-checkNavBar(); // shows initial box(es) 
-
-function checkNavBar() {
-  const triggerBottom = (window.innerHeight / 5 * 40);
-  
-  navBar.forEach(fix_nav_bar => {
-    const boxTop = navBar.getBoundingClientRect().top;
-    
-    if(boxTop < triggerBottom) {
-      box.classList.add('addShow');
-    } else {
-      box.classList.remove('addShow');
-    }
-  })
+var block_show = null;
+ 
+function scrollTracking(){
+	var wt = $(window).scrollTop();
+	var wh = $(window).height();
+	var et = $('#headerID').offset().top;
+	var eh = $('#headerID').outerHeight();
+	
+	if (et >= wt && et + eh <= wh + wt){
+		if (block_show == null || block_show == false) {
+			console.log("Visible");
+      $(document).ready(function(){
+        $(".sideBarAmin").removeClass("active");			
+		$(".sideBarAmin").addClass("active2");
+      });
+		}
+		block_show = true;
+	} else {
+		if (block_show == null || block_show == true) {
+			console.log("Hidden");
+      $(".sideBarAmin").addClass("active");
+	  $(".sideBarAmin").removeClass("active2");
+		}
+		block_show = false;
+	}
 }
+ 
+$(window).scroll(function(){
+	scrollTracking();
+});
+	
+$(document).ready(function(){ 
+	scrollTracking();
+});

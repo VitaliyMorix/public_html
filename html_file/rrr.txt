@@ -1,0 +1,52 @@
+var isScroll=false;
+        window.addEventListener("scroll", throttleScroll, false);
+        function throttleScroll(e)
+        {
+          if(isScroll==false)
+          {
+            window.requestAnimationFrame(function()
+              {
+                dealWithScroll(e);
+                isScroll=false;
+              }
+            );
+          }
+          isScroll=true;
+        }
+
+        window.addEventListener("DOMContentLoaded", scrolling, false);
+        var listItem=document.querySelectorAll("#axis");
+
+        function scrolling(e)
+        {
+          if(isPartiallyVisible(listItem))
+          {
+            listItem.classList.add("active");
+          }
+          else
+          {
+            listItem.classList.remove("active");
+          }
+        }
+        
+
+        function isPartiallyVisible(el) 
+        {
+          var elementBoundary = el.getBoundingClientRect();
+      
+          var top = elementBoundary.top;
+          var bottom = elementBoundary.bottom;
+          var height = elementBoundary.height;
+      
+          return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+      }
+
+      function isFullyVisible(el) 
+      {
+        var elementBoundary = el.getBoundingClientRect();
+      
+        var top = elementBoundary.top;
+        var bottom = elementBoundary.bottom;
+      
+        return ((top >= 0) && (bottom <= window.innerHeight));
+      }

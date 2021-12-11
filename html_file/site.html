@@ -3,41 +3,36 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet"  type="text/css" href="../file_css/style.css">
+    <script src="../js_scripts/jQuery.js"></script>
     <link rel="shortcut icon" href="../image/image-jpg/logo_profile.png" type="image/png">
     <title>Пейзажи в играх</title>
   </head>
 
-  <body>	
+  <body>
+    <div class="sideBarAmin">
+      <nav class="sideBarFlex">
+        <a href="../file_php/post.html"><img src="../image/img_icons/icons8-php-logo (1).svg" width="100%"></a>
+        <a href="../html_file/js_test.html"><img src="../image/img_icons/icons8-javascript.svg" width="100%"></a>
+        <a href="../index.html"><img src="../image/img_icons/source_icons_info-empty.svg" width="100%"></a>
+        <a href="../html_file/site.html"><img src="../image/img_icons/source_icons_journal-page.svg" width="100%"></a>
+      </nav>
+    </div>	
+
+  <div class="mask-content"></div>
+
     <header> 
-      <nav id="fix_nav_bar">
+      <nav id="headerID">
         <div class="header-setup-style">
           <div class="setup-menu-header">
             <a href="../file_php/post.html">Примеры<br>на PHP</a>
             <a href="../html_file/js_test.html">Примеры<br>на JS</a>
-            <a class="name-site">the most <br> boring site</a>
+            <div class="name-site">the most <br> boring site</div>
             <a href="../index.html">О сайте</a>
             <a href="../html_file/site.html">Основная<br>информация</a>
           </div>
         </div>
       </nav>
     </header>
-
-    <script>
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function() {myFunction()};
-        // Get the navbar
-        var fix_nav_bar = document.getElementById("fix_nav_bar");
-        // Get the offset position of the navbar
-        var addShow = fix_nav_bar.offsetTop;
-        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function myFunction() {
-          if (window.pageYOffset >= addShow) {
-            fix_nav_bar.classList.add("addShow")
-          } else {
-            fix_nav_bar.classList.remove("addShow");
-          }
-        }
-    </script>
 
     <div class="box">
       <div class="h1-align"><h1>Красоты природы в играх.</h1></div>
@@ -85,7 +80,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="box">
         <div class="sim-slider">
           <ul class="sim-slider-list">
@@ -106,15 +101,17 @@
       <p>
         <div class="footer-style">
           
-          <div class="flex-box0">
-            <p class="p-footer-style-0">Где найти автора?</p>
-            <div>
-              <a href="https://vk.com/vitalik_vaskin"><img src="../image/img_icons/iconmonstr-vk-3.svg" ></a>
-              <a href="https://t.me/Morix2000"><img src="../image/img_icons/iconmonstr-telegram-3.svg"></a>
-              <a href="https://steamcommunity.com/id/vitalyMorix/"><img src="../image/img_icons/iconmonstr-steam-3.svg"></a>
+          <div>
+            <div class="flex-box0">
+              <p class="p-footer-style-0">Где найти автора?</p>
+              <div class="animationBlocs">
+                <a href="https://vk.com/vitalik_vaskin"><img src="../image/img_icons/iconmonstr-vk-3.svg" ></a>
+                <a href="https://t.me/Morix2000"><img src="../image/img_icons/iconmonstr-telegram-3.svg"></a>
+                <a href="https://steamcommunity.com/id/vitalyMorix/"><img src="../image/img_icons/iconmonstr-steam-3.svg"></a>
+              </div>
             </div>
           </div>
-          
+
           <div class="logo-footer-style">
             <img src="../image/image-jpg/logo_profile.png">
           </div>
@@ -135,8 +132,8 @@
         </div>
       </p>
     </footer>
- 
 
+    <script src="../js_scripts/script_nav_bar.js"></script>
 <!-- подключение слайдера -->
 <script src="../js_scripts/sim-slider.js"></script>
 <!-- вызов слайдера -->

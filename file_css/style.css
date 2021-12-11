@@ -3,14 +3,14 @@
  src:url(../font/Raleway-Regular.ttf);
 }
 
-nav{
-  transition:top 500ms ease-in-out;
+@keyframes move {
+  0%{margin: 0;}
+  100%{margin: 10px;}
 }
-nav.scroll-up, nav:focus-within{
-  top:0;
-}
-nav.scroll-down{
-  top:-100;
+
+@keyframes move1 {
+  0%{margin: 10px;}
+  100%{margin: 0px;}
 }
 
 body{
@@ -22,6 +22,46 @@ body{
  min-width: 10%;
  background-color: rgb(39, 39, 39);
  overflow-x: hidden;
+}
+
+.sideBarAmin{
+  position:fixed;
+  display: block;
+  z-index: 2000;
+  top:-10%;
+  left: 21%;
+  background-color: #5E91FF;
+  border-radius: 7px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.sideBarFlex{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+}
+
+.sideBarAmin a:hover{
+  background-color: rgb(61, 232, 255);
+  border-radius: 7px;
+}
+
+.sideBarAmin img{
+  width: 45px;
+}
+.sideBarAmin a{
+  text-decoration: none;
+  justify-content: space-around;
+}
+.active {
+  transform: translateY(50%);
+  transition: transform 0.4s ease;
+}
+
+.active2{
+  transform: translateY(-200%);
+  transition: transform 0.4s ease;
 }
 
 main{
@@ -39,7 +79,7 @@ main{
 }
 
 .box:nth-of-type(even) {
-    transform: translateX(-400%);
+  transform: translateX(-400%);
 }
 
 .box.show {
@@ -82,13 +122,14 @@ main{
   max-width: 900px;
   min-width: inherit;
   text-align: center;
-  padding: 20px;
+  padding:10px;
   margin-left:auto;
   margin-right:auto;
 }
 .setup-menu-header{
   display: flex;
   flex-direction: row;
+  /*flex-direction: column;*/
   font-size: 20px;
   align-items: center;
 }
@@ -99,30 +140,60 @@ main{
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.267);
   color:black;
   text-decoration: none;
-  margin-inline: 20px;
+  margin-inline: 25px;
 }
-/*
-header{
-  background-color: #5E91FF;
-  border-radius: 7px;
-  max-width: 1000px;
-  min-width: inherit;
-  text-align: center;
-  margin-left:auto;
-  margin-right:auto;
-  padding: 20px;
+.setup-menu-header p{
+  margin-inline: 25px;
 }
-*/
 
-.addShow{
-  position:fixed;
-  z-index: 1;
-  top: 0;
-  margin-inline: 83px;
+.header-setup-style a{
+  /*margin-inline: 25px;*/
+  transform: scale(1);
+  transition: transform 500ms ease;
 }
+
+.header-setup-style a:hover{
+  background-color: rgb(61, 232, 255);
+  color: #002fff;
+  /*margin-inline: 30px;*/
+  transform: scale(1.2);
+  transition: transform 500ms ease;
+}
+
 /*2 конец*/
 /*----------------------------------------*/
+.objective{
+  position:fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  top: 0;
+  left: 0;
+  align-items: center;
+}
 
+.objective a{
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.267);
+  color:black;
+  text-decoration: none;
+  display: block;
+}
+
+#axis {
+  transition: all .2s ease-in-out;
+  transform: translate(-500px, 0);
+  z-index: 1;
+  opacity: 0;
+}
+
+#axis.active{
+  transform: translate(0, 0);
+  position: fixed;
+  opacity: 1;
+}
 h1{
   margin-left:auto;
   margin-right:auto;
@@ -190,12 +261,36 @@ footer{
   flex-direction: row;
   justify-content: space-around;
 }
+
 .flex-box0{
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+
+
+.flex-box0 img:hover{
+  background-color: rgb(238, 238, 238);
+  border-radius: 8px;
+  transform: scale(2);
+  transition: transform 500ms ease;
+}
+
+.flex-box0 a:hover{
+  margin: 10px;
+  animation: move 500ms ease;
+}
+
+.flex-box0 a{
+  margin: 0;
+  animation: move1 500ms ease;
+}
+
+.flex-box0 img{
+  transform: scale(1);
+  transition: transform 500ms ease;
 }
 
 .flex-box1{
@@ -226,6 +321,21 @@ footer{
 .logo-footer-style img{
   border-radius: 100px;
   width: 150px;
+}
+
+.buttomStyle{
+  padding: 5px;
+  margin-block: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #5E91FF;
+  width: 220px;
+  height: 50px;
+  border-radius: 7px;
+  font-family: Raleway;
+  font-size: 20px;
+  cursor: pointer;
+  border-color: black;
 }
 
 /*Смена картинок (начало)*/
