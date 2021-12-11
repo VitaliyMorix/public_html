@@ -10,14 +10,14 @@ function scrollTracking(){
 		if (block_show == null || block_show == false) {
 			console.log("Visible");
       $(document).ready(function(){
-        $('sideBarAmin').addClass('active');			
+        $(".sideBarAmin").removeClass("active");			
       });
 		}
 		block_show = true;
 	} else {
 		if (block_show == null || block_show == true) {
 			console.log("Hidden");
-      $("sideBarAmin").removeClass("active");
+      $(".sideBarAmin").addClass("active");
 		}
 		block_show = false;
 	}
