@@ -13,6 +13,16 @@
   100%{margin: 0px;}
 }
 
+@keyframes moveSideBar {
+  0%{margin-block: 10px;}
+  100%{margin-block: 0px;}
+}
+
+@keyframes moveSideBar1 {
+  0%{margin-block: 0px;}
+  100%{margin-block: 10px;}
+}
+
 body{
  margin-left:auto;
  margin-right:auto;
@@ -36,15 +46,34 @@ body{
   font-size: 20px;
 }
 
+.sideBarFlex a:hover{
+  margin-block: 10px;
+  transition: moveSideBar1 0.4s ease;
+}
+.sideBarFlex img:hover{
+  transform: scale(1.3);
+  transition: transform 0.4s ease;
+  z-index: 5;
+  background-color: rgb(61, 232, 255);
+  border-radius: 7px;
+}
+
+.sideBarFlex a{
+  margin-block: 0px;
+  transition: moveSideBar 0.4s ease;
+}
+
+.sideBarFlex img{
+  transform: scale(1);
+  transition: transform 0.4s ease;
+  z-index: 4;
+  display: block;
+}
+
 .sideBarFlex{
   display: flex;
   flex-direction: column;
   justify-content:space-around;
-}
-
-.sideBarAmin a:hover{
-  background-color: rgb(61, 232, 255);
-  border-radius: 7px;
 }
 
 .sideBarAmin img{
