@@ -1,6 +1,4 @@
 <?php
-//admin
-//$2y$10$bAxn3od8w1WxHsUsWga9HeOCZSiEJEa9v1KOdsZ2g9DAYv8juJFRy
 function base_data($login, $pas)
 {
     $hash = 0;
