@@ -76,13 +76,13 @@
             Но не будем о геймплее игры, лучше обсудить сеттинг, который задаёт атмосферу игре.</p>
             
             <p>Мир, окружающий главного героя, не просто похож на средневековую эпоху, а практически им является.
-            Рассмотрим первое поселение, которое встречает главный герой - Ривервуд.</p>
+            Первое поселение, которое встречает главный герой - Ривервуд.</p>
           </div>
         </div>
       </div>
       
       <div class="box">
-        <div class="sim-slider">
+        <div class="sim-slider" id="slide1">
           <ul class="sim-slider-list">
             <li><img src="../image/image-jpg/white.webp" width="100%" alt="screen"></li> <!-- это экран -->
             <li class="sim-slider-element"><img src="../image/image-jpg/riverwood/river1.webp" width="100%" alt="0"></li>
@@ -95,6 +95,72 @@
           <div class="sim-slider-dots"></div>
         </div>
       </div>
+
+      <div class="box">
+        <div class="main-style">
+          <div class="text-layer">
+            <p>
+              Многое поселения Скайрима похожи друг на друга, но есть и уникальные города такие как Вайтран, Маркарт, Солитьюд, Рифтен, Винтерхолд. В каждом есть своя достопримечательность. 
+              Вайтран: Драконий Предел - место где был затач
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="sim-slider" id="slide2">
+          <ul class="sim-slider-list">
+            <li><img src="../image/image-jpg/white.webp" width="100%" alt="screen"></li>
+            <li class="sim-slider-element"><img src="../image/image-jpg/city-skyrim/Vaytran.webp" width="100%" alt="0"></li>
+            <li class="sim-slider-element"><img src="../image/image-jpg/city-skyrim/Markart.webp" width="100%" alt="1"></li>
+            <li class="sim-slider-element"><img src="../image/image-jpg/city-skyrim/Solityd.webp" width="100%" alt="2"></li>
+            <li class="sim-slider-element"><img src="../image/image-jpg/city-skyrim/Riften.webp" width="100%" alt="3"></li>
+            <li class="sim-slider-element"><img src="../image/image-jpg/city-skyrim/Winterhold.webp" width="100%" alt="4"></li>
+          </ul>
+          <div class="sim-slider-arrow-left"></div>
+          <div class="sim-slider-arrow-right"></div>
+          <div class="sim-slider-dots"></div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="main-style">
+          <div class="text-layer">
+            <p>
+              Также в Скайриме есть немало и других интересных мест, которые завораживают своей красотой. 
+              Например, Высокий Хротгар, который находится на Глотке Мира - самой высокой точке Скайрима. 
+              Или Совнгард, место в которое отправляются все норды, чтобы отдохнуть после смерти. 
+              Также стоит упомянуть про место обитания Клинков – защитников довакина.
+               У этого места прослеживаются черты японской культуры. 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="sim-slider" id="slide3">
+          <ul class="sim-slider-list">
+            <li><img src="../image/image-jpg/white.webp" width="100%" alt="screen"></li>
+            <li class="sim-slider-element"><img src="../image/image-jpg/intresting_places/Hrodgard.webp" width="100%" alt="4"></li>
+            <li class="sim-slider-element"><img src="../image/image-jpg/intresting_places/WorldOfDeath.webp" width="100%" alt="5"></li>
+            <li class="sim-slider-element"><img src="../image/image-jpg/intresting_places/BladesMen.webp" width="100%" alt="6"></li>
+          </ul>
+          <div class="sim-slider-arrow-left"></div>
+          <div class="sim-slider-arrow-right"></div>
+          <div class="sim-slider-dots"></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="main-style">
+          <div class="text-layer">
+            <h2>Sekiro: Shadows Die Twice</h2>
+            <p>
+              Ntrcn
+            </p>
+          </div>
+        </div>
+      </div>
+
     </main>
     
     <footer>
@@ -137,7 +203,7 @@
 <!-- подключение слайдера -->
 <script src="../js_scripts/sim-slider.js"></script>
 <!-- вызов слайдера -->
-<script>new Sim()</script>
+<script>new Sim("slide1"); new Sim("slide2");new Sim("slide3");</script>
 <script src="../js_scripts/script.js"></script>
   </body>
 </html>
