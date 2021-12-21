@@ -10,21 +10,29 @@
 
 @keyframes move1 {
   0%{margin: 10px;}
-  100%{margin: 0px;}
+  100%{margin: 0;}
 }
 
-@keyframes moveSideBar {
-  0%{margin-top: 10px;
-    margin-bottom: 10px;}
-  100%{margin-top: 0px;
-    margin-bottom: 0px}
+@keyframes move2 {
+  0%{
+    margin-left:  0;
+    margin-right:  0;
+  }
+  100%{
+    margin-left:  10px;
+    margin-right:  10px;
+  }
 }
 
-@keyframes moveSideBar1 {
-  0%{margin-top: 0px;
-    margin-bottom: 0px}
-  100%{margin-top: 10px;
-    margin-bottom: 10px;}
+@keyframes move3 {
+  0%{
+    margin-left:  10px;
+    margin-right:  10px;
+  }
+  100%{
+    margin-left:  0;
+    margin-right:  0;
+  }
 }
 
 body{
@@ -41,17 +49,14 @@ body{
 
 .sideBarAmin{
   position:fixed;
-  display: block;
   z-index: 2000;
   top:90%;
-  /*left: 21%;*/
+  margin-left: 4%;
   text-align:center;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #5E91FF;
   border-radius: 7px;
   padding: 10px;
-  font-size: 20px;
+  /*font-size: 10px;*/
 }
 
 .sideBarFlex{
@@ -60,27 +65,29 @@ body{
   justify-content:space-around;
 }
 
-
-/*.sideBarFlex a:hover{
-  margin-block: 10px;
-  transition: moveSideBar1 0.4s ease;
-}*/
 .sideBarFlex img:hover{
   transform: scale(1.2);
-  transition: transform 0.4s ease;
+  transition: transform 800ms ease;
   z-index: 5;
   background-color: rgb(61, 232, 255);
   border-radius: 7px;
 }
-
-.sideBarFlex a{
-  margin-block: 0px;
-  transition: moveSideBar 0.4s ease;
+/*
+.sideBarFlex a:hover{
+  margin-left:  10px;
+  margin-right:  10px;
+  transition: move2 800ms ease;
 }
 
+.sideBarFlex a{
+  margin-left:  0;
+  margin-right:  0;
+  transition: move3 800ms ease;
+}
+*/
 .sideBarFlex img{
   transform: scale(1);
-  transition: transform 0.4s ease;
+  transition: transform 800ms ease;
   z-index: 4;
   display: block;
 }
@@ -91,9 +98,10 @@ body{
 .sideBarAmin a{
   text-decoration: none;
   justify-content: space-around;
+  margin-inline: 2px;
 }
 .active {
-  transform: translateY(50%);
+  transform: translateY(40%);
   transition: transform 0.4s ease;
 }
 
@@ -388,7 +396,6 @@ footer{
   margin-block: 10px;
   backdrop-filter: blur(2.5px);
 }
-
 
 .divStyleFlex p{
   text-align: center;
