@@ -142,9 +142,12 @@ main{
   min-width: inherit;
   margin-left:auto;
   margin-right:auto;
-  margin-top:15px;
-  margin-bottom:15px;
-  padding:15px;
+  /*margin-top:15px;
+  margin-bottom:15px;*/
+  margin-block: 15px;
+  /*padding:15px;*/
+  padding-inline:15px;
+  padding-block: 1px;
   max-width: 800px;
 }
 
@@ -265,6 +268,7 @@ h2{
   margin-left:auto;
   margin-right:auto;
   margin: 5px;
+  padding-top: 5px;
 }
 
 .bg-img-setup{
@@ -293,6 +297,7 @@ h2{
 .text-layer {
   font-size: 1.2em;
   min-width: inherit;
+  padding: 5px;
 }
 
 .table-contents-layer{
