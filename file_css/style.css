@@ -14,13 +14,17 @@
 }
 
 @keyframes moveSideBar {
-  0%{margin-block: 10px;}
-  100%{margin-block: 0px;}
+  0%{margin-top: 10px;
+    margin-bottom: 10px;}
+  100%{margin-top: 0px;
+    margin-bottom: 0px}
 }
 
 @keyframes moveSideBar1 {
-  0%{margin-block: 0px;}
-  100%{margin-block: 10px;}
+  0%{margin-top: 0px;
+    margin-bottom: 0px}
+  100%{margin-top: 10px;
+    margin-bottom: 10px;}
 }
 
 body{
@@ -39,20 +43,30 @@ body{
   position:fixed;
   display: block;
   z-index: 2000;
-  top:-10%;
-  left: 21%;
+  top:90%;
+  /*left: 21%;*/
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #5E91FF;
   border-radius: 7px;
   padding: 10px;
   font-size: 20px;
 }
 
-.sideBarFlex a:hover{
+.sideBarFlex{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+
+
+/*.sideBarFlex a:hover{
   margin-block: 10px;
   transition: moveSideBar1 0.4s ease;
-}
+}*/
 .sideBarFlex img:hover{
-  transform: scale(0.7);
+  transform: scale(1.2);
   transition: transform 0.4s ease;
   z-index: 5;
   background-color: rgb(61, 232, 255);
@@ -71,12 +85,6 @@ body{
   display: block;
 }
 
-.sideBarFlex{
-  display: flex;
-  flex-direction: column;
-  justify-content:space-around;
-}
-
 .sideBarAmin img{
   width: 45px;
 }
@@ -90,7 +98,8 @@ body{
 }
 
 .active2{
-  transform: translateY(-200%);
+  transform: translateY(600%);
+  
   transition: transform 0.4s ease;
 }
 
