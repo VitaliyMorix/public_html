@@ -9,7 +9,7 @@ buttomClickCB.onclick=function ()
 
     let ctx=mySpace.getContext("2d");
 
-    ctx.lineWidth=5;        //задание штртны контура
+    ctx.lineWidth=5;        //задание ширины контура
     ctx.fillStyle = "#FFCC33";      //задание цвета заливки
     ctx.rect(0,0,500,500);      //данные для рисования прямоугольника
     ctx.fill();     //рисование прямоугольника
@@ -17,7 +17,7 @@ buttomClickCB.onclick=function ()
 
 
     ctx.beginPath();
-    //циклы по рисованию клеток шахмотной доски
+    //циклы по рисованию клеток шахматной доски
     for(let i=0;i<8;i++)
     {
         let a;
